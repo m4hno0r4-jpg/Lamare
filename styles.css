@@ -1,4 +1,4 @@
-:root{--lagoon:#08314F;--lagoon2:#0E5A8A;--sand:#FFFFFF;--mist:#EAF4F8;--white:#fff;--ink:#14283A;--muted:#4F6577;--brass:#0B6FA4;--gold:#7CCBEB;--line:#D3E2EB;--ocean:#0E6BA8;--serif:'Bodoni Moda','Didot',Georgia,serif;--sans:'Manrope',system-ui,Arial,sans-serif}
+:root{--lagoon:#12353A;--lagoon2:#1D4A4F;--sand:#F6F1E8;--mist:#E3EDEA;--white:#fff;--ink:#1B2A2C;--muted:#4A5A5B;--brass:#7A5F2E;--gold:#D2B27A;--line:#D9D2C3;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,Arial,sans-serif}
 *{box-sizing:border-box;margin:0}html{scroll-behavior:auto}
 body{font:400 17px/1.7 var(--sans);color:var(--ink);background:var(--sand)}
 img{display:block;width:100%;height:100%;object-fit:cover;background:var(--mist)}
@@ -12,7 +12,7 @@ a{color:inherit}ul{padding:0;list-style:none}
 .eyebrow{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);margin-bottom:14px;font-weight:500}.dark .eyebrow{color:var(--gold)}
 .lead{max-width:56ch;color:var(--muted);margin-top:20px}.dark .lead{color:#C5D3D2}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 32px;background:var(--lagoon);color:var(--white);border:1px solid var(--lagoon);font:500 .8rem var(--sans);letter-spacing:.2em;text-transform:uppercase;text-decoration:none;cursor:pointer}
-.btn:hover{background:var(--lagoon2)}.btn.gold{background:var(--gold);border-color:var(--gold);color:var(--lagoon)}.btn.gold:hover{background:#B5E3F5}
+.btn:hover{background:var(--lagoon2)}.btn.gold{background:var(--gold);border-color:var(--gold);color:var(--lagoon)}.btn.gold:hover{background:#E0C48F}
 .btn.ghost{background:transparent;color:var(--lagoon)}.btn.ghost:hover{background:var(--lagoon);color:var(--white)}
 .skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;z-index:99;background:var(--white);padding:10px 16px}
 /* header */
@@ -24,7 +24,7 @@ nav ul{display:flex;gap:34px}nav a{font-size:.82rem;letter-spacing:.16em;text-tr
 header .btn{min-height:46px;padding:0 24px}
 /* hero */
 .hero{position:relative;min-height:min(88vh,860px);display:flex;align-items:flex-end;color:var(--white);background:var(--lagoon)}
-.hero>img{position:absolute;inset:0}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,49,79,.45),rgba(8,49,79,.15) 40%,rgba(8,49,79,.88));z-index:1}
+.hero>img{position:absolute;inset:0}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,53,58,.45),rgba(18,53,58,.15) 40%,rgba(18,53,58,.88));z-index:1}
 .hero .w{position:relative;z-index:2;width:100%;padding-top:140px;padding-bottom:56px}
 .hero h1{color:var(--white);font-size:clamp(2.8rem,7vw,5.8rem);max-width:15ch}.hero p.sub{max-width:50ch;margin-top:20px;font-size:1.15rem;color:#E9EFEE}
 .book{margin-top:44px;background:var(--white);color:var(--ink);padding:22px;display:grid;grid-template-columns:repeat(4,1fr) auto;gap:16px;align-items:end;box-shadow:0 24px 60px rgba(0,0,0,.25)}
@@ -57,11 +57,11 @@ html,body{max-width:100%;overflow-x:clip}
 .mnav{display:none;border:0;padding:0;position:relative}
 .mnav summary{display:flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border:1px solid var(--lagoon);font:500 .75rem var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--lagoon);cursor:pointer}
 .mnav summary::after,.mnav[open] summary::after{content:none}
-.mnav ul{position:absolute;right:0;top:56px;width:min(88vw,320px);background:var(--white);border:1px solid var(--line);padding:6px 20px;z-index:30;box-shadow:0 18px 40px rgba(8,49,79,.18)}
+.mnav ul{position:absolute;right:0;top:56px;width:min(88vw,320px);background:var(--white);border:1px solid var(--line);padding:6px 20px;z-index:30;box-shadow:0 18px 40px rgba(18,53,58,.18)}
 .mnav li a{display:flex;align-items:center;min-height:52px;border-bottom:1px solid var(--line);text-decoration:none;font-size:.9rem;letter-spacing:.14em;text-transform:uppercase}
 .mnav li:last-child a{border:0;color:var(--brass);font-weight:500}
 .cta{position:relative;color:var(--white);background:var(--lagoon);text-align:center}
-.cta>img{position:absolute;inset:0}.cta:before{content:"";position:absolute;inset:0;background:rgba(8,49,79,.72);z-index:1}
+.cta>img{position:absolute;inset:0}.cta:before{content:"";position:absolute;inset:0;background:rgba(18,53,58,.72);z-index:1}
 .cta .w{position:relative;z-index:2}.cta h2{color:var(--white)}.cta .lead{margin-left:auto;margin-right:auto;color:#E9EFEE}.cta .acts{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
 .btn.line{background:transparent;color:var(--white);border-color:var(--white)}.btn.line:hover{background:var(--white);color:var(--lagoon)}
 @media(max-width:980px){.mnav{display:block}header .w{gap:10px}header .logo{font-size:1.5rem;letter-spacing:.22em}
@@ -104,28 +104,3 @@ body.bk-page{padding-bottom:84px}}
 [hidden]{display:none!important}
 footer .cols>*{min-width:0}footer a{overflow-wrap:anywhere}footer li a{display:inline-block;padding:8px 0}
 @media(max-width:560px){footer .cols{grid-template-columns:1fr}}
-
-/* ---- Lumaré identity: ink-blue night sea, coral dusk, editorial chapters, arched windows ---- */
-h1,h2,h3{font-weight:500;letter-spacing:-.01em}
-.logo::before{content:"";display:inline-block;width:.5em;height:.5em;border:1.5px solid currentColor;border-radius:50%;margin-right:.55em;vertical-align:.1em}
-main{counter-reset:ch}
-.sec .eyebrow::before{counter-increment:ch;content:counter(ch,decimal-leading-zero) "\00a0\00a0/\00a0\00a0"}
-.hero h1{font-style:italic;font-weight:400}
-.hero .eyebrow{letter-spacing:.2em}
-.two .ph{border-radius:999px 999px 0 0}
-.card .ph{margin:14px 14px 0;border-radius:999px 999px 0 0}
-.card{border-radius:0}
-#offers{background:var(--ocean)}#offers h2,#offers .eyebrow{color:#fff}#offers .offer>div{border-top-color:var(--gold)}
-.btn.gold{color:var(--lagoon)}
-.price,.tm strong,.trust b,.res strong{font-family:var(--serif)}
-.trust li{background:var(--white)}
-.sub{color:var(--brass)}
-blockquote p{font-style:italic}
-.logo{white-space:nowrap}
-@media(max-width:560px){header .logo{font-size:1.2rem;letter-spacing:.14em}.logo::before{margin-right:.4em}header .btn{padding:0 14px}.mnav summary{padding:0 14px}}
-
-/* Ocean: white and pale-aqua pages, deep-blue accents, navy only for the hero, spa, enquiry and footer */
-.top{background:var(--lagoon);color:#E3F1F8}
-body.bk-page{background:var(--mist)}
-.sec.mist,.sec.dark,.cta{background-image:none}
-.trust,.trust li{background:#fff}

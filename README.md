@@ -4,7 +4,7 @@ Static site: `index.html` (home) and `booking.html` (reservation request). No bu
 
 ## Turn on the booking backend (Supabase)
 1. Create a Supabase project, open **SQL editor**, paste and run `supabase/schema.sql`.
-2. The project URL is already in `config.js`. Paste the project's **publishable (or anon) key** next to it (Supabase dashboard > Project Settings > API Keys). Never use the service_role key here.
+2. Put the project URL and the **anon/publishable** key in `config.js`. Never use the service_role key here.
 3. Requests then appear in **Table editor > booking_requests**. Visitors can only insert; they cannot read, edit or delete anything (Row Level Security).
 
 Until `config.js` is filled in, the booking page says online booking is not connected and offers an email fallback. It never shows a success message unless the database accepts the request.
