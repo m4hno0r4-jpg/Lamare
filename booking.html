@@ -1,0 +1,100 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reserve your stay | Lumaré Maldives</title>
+<meta name="description" content="Choose your dates and villa at Lumaré Maldives. Request a booking in two minutes. No payment is taken until we confirm.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"></head>
+<body class="bk-page">
+<a class="skip" href="#main">Skip to content</a>
+<p class="top">Malé (MLE) to Lumaré · 35-minute scenic seaplane transfer</p>
+<header class="nav"><div class="w"><a class="logo" href="index.html#top">LUMARÉ<small>MALDIVES</small></a>
+<nav aria-label="Primary"><ul><li><a href="index.html#villas">Villas</a></li><li><a href="index.html#spa">Spa</a></li><li><a href="index.html#dining">Dining</a></li><li><a href="index.html#experiences">Experiences</a></li><li><a href="index.html#offers">Offers</a></li></ul></nav>
+<a class="btn" href="index.html">Home</a>
+<details class="mnav"><summary>Menu</summary><ul><li><a href="index.html#top">Home</a></li><li><a href="index.html#villas">Villas</a></li><li><a href="index.html#spa">Spa</a></li><li><a href="index.html#dining">Dining</a></li><li><a href="index.html#experiences">Experiences</a></li><li><a href="index.html#offers">Offers</a></li><li><a href="index.html#plan">Good to know</a></li></ul></details></div></header>
+<main id="main">
+<section class="bh dark"><div class="w"><p class="eyebrow">Reservations</p><h1>Reserve your stay</h1><p class="lead">Choose your dates and villa. No payment is taken now: our team confirms availability and sends a secure payment link within 24 hours.</p></div></section>
+<div class="w bk" id="bkwrap">
+<form id="bf" novalidate>
+<section class="blk"><h2>1. Dates and guests</h2><p class="hint">Check-in is from 2 pm and check-out by 12 noon.</p>
+<div class="fg three"><div><label for="in">Check-in</label><input id="in" type="date"></div><div><label for="out">Check-out</label><input id="out" type="date"></div>
+<div><label for="g">Guests</label><select id="g"><option value="1">1 guest</option><option value="2" selected>2 guests</option><option value="3">3 guests</option><option value="4">4 guests</option></select></div></div>
+<p class="fe" id="d-e" role="alert"></p></section>
+<section class="blk"><h2>2. Choose your villa</h2><p class="hint">Every villa includes a private deck, daily breakfast and a dedicated host.</p>
+<div class="chips" role="group" aria-label="Filter villas"><button type="button" class="chip" data-f="all" aria-pressed="true">All</button><button type="button" class="chip" data-f="beach" aria-pressed="false">Beach</button><button type="button" class="chip" data-f="water" aria-pressed="false">Overwater</button><button type="button" class="chip" data-f="pool" aria-pressed="false">Private pool</button></div>
+<div style="max-width:320px"><label for="sort">Sort by</label><select id="sort"><option value="asc">Price: low to high</option><option value="desc">Price: high to low</option></select></div>
+<div class="vl" id="vl" role="radiogroup" aria-label="Villa"></div><p class="fe" id="v-e" role="alert"></p></section>
+<section class="blk"><h2>3. Make it yours <span style="font-size:1rem;color:var(--muted)">(optional)</span></h2><p class="hint">Add now or later. Nothing is charged until we confirm.</p><div id="ex"></div></section>
+<section class="blk"><h2>4. Your details</h2><p class="hint">We use these only to reply about your stay.</p>
+<div class="fg"><div><label for="n">Full name</label><input id="n" autocomplete="name"><p class="fe" id="n-e"></p></div><div><label for="e">Email</label><input id="e" type="email" autocomplete="email" inputmode="email"><p class="fe" id="e-e"></p></div>
+<div><label for="p">Phone <span style="text-transform:none;letter-spacing:0">(optional)</span></label><input id="p" type="tel" autocomplete="tel" inputmode="tel"></div><div><label for="a">Arrival flight or time <span style="text-transform:none;letter-spacing:0">(optional)</span></label><input id="a" placeholder="e.g. EK 652, landing 11:40"></div>
+<div class="full"><label for="m">Special requests <span style="text-transform:none;letter-spacing:0">(optional)</span></label><textarea id="m" placeholder="Celebrations, dietary needs, spa treatments"></textarea></div>
+<div class="hp" aria-hidden="true"><label for="hp">Leave this empty</label><input id="hp" tabindex="-1" autocomplete="off"></div></div></section>
+<button class="btn" type="submit" id="sub" style="width:100%">Request booking</button>
+<div class="msg" id="msg" role="status" aria-live="polite"></div>
+<p class="fine">By requesting, you agree that this is an enquiry. Your booking is only confirmed when you receive written confirmation from us. Free cancellation up to 30 days before arrival.</p>
+</form>
+<aside class="sum" id="sum" aria-label="Stay summary"></aside>
+</div>
+<div class="w" id="done" hidden style="padding-bottom:72px"></div>
+</main>
+<div class="bar" id="bar"><p class="bt"><small>Estimated total</small><b id="bt">$0</b></p><button class="btn" type="submit" form="bf" id="sub2">Request booking</button></div>
+<footer class="f"><div class="w"><div class="legal" style="margin:0;border:0;padding:0"><p>© <span id="y"></span> Lumaré Maldives. A fictional resort created for a design exercise.</p><p><a href="index.html">Back to home</a> · <a href="mailto:reservations@lumare.example">reservations@lumare.example</a></p></div></div></footer>
+<script src="config.js"></script>
+<script>
+const $=id=>document.getElementById(id),fmt=n=>'$'+Math.round(n).toLocaleString('en-US'),esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const IMG=i=>`https://images.pexels.com/photos/${i}/pexels-photo-${i}.jpeg?auto=compress&cs=tinysrgb&w=`;
+const VILLAS=[{id:'beach',name:'Beach Villa',price:1150,cap:3,tags:['beach'],img:3155726,info:'140 m² · Sleeps 3 · King bed',sub:'Garden and sand, steps from the water'},
+{id:'water',name:'Overwater Villa',price:1650,cap:3,tags:['water'],img:1287455,info:'165 m² · Sleeps 3 · King bed',sub:'Suspended above the lagoon'},
+{id:'sunset',name:'Sunset Pool Villa',price:2450,cap:4,tags:['water','pool'],img:30037393,info:'260 m² · Sleeps 4 · Two king beds',sub:'Infinity pool and a dedicated butler'}];
+const EXTRAS=[{id:'seaplane',name:'Return seaplane transfer',d:'Malé to Lumaré and back, 35 minutes each way.',price:480,per:'guest'},{id:'sandbank',name:'Private sandbank dinner',d:'A table for two, set on the sand at sunset.',price:380,per:'stay'},{id:'spa',name:'Spa credit',d:'Use on any treatment during your stay.',price:250,per:'stay'},{id:'honey',name:'Honeymoon setup',d:'Flowers, champagne and turndown by candlelight.',price:150,per:'stay'}];
+const OFFERS={stay5:'Stay 5, pay 4 (the fifth night is on us. We will apply it when we confirm.)',honeymoon:'Honeymoon at Lumaré (we will apply the package when we confirm.)'};
+const P=new URLSearchParams(location.search);let filt='all',sel=P.get('villa')||'',done=false,busy=false;
+const ref=()=>'LM-'+Array.from(crypto.getRandomValues(new Uint8Array(6)),b=>'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'[b%32]).join('');
+const REF=ref(); // one reference per visit, so a double tap can never create two requests
+const today=new Date().toISOString().slice(0,10);$('in').min=$('out').min=today;$('y').textContent=new Date().getFullYear();
+if(P.get('in'))$('in').value=P.get('in');if(P.get('out'))$('out').value=P.get('out');if([1,2,3,4].includes(+P.get('guests')))$('g').value=P.get('guests');
+if(P.get('offer')&&OFFERS[P.get('offer')])$('m').value='Offer: '+OFFERS[P.get('offer')]+'\n';
+const nights=()=>{const a=$('in').value,b=$('out').value;if(!a||!b)return 0;const n=Math.round((new Date(b)-new Date(a))/864e5);return n>0?n:0};
+function calc(){const v=VILLAS.find(x=>x.id===sel),n=nights(),g=+$('g').value,base=v&&n?v.price*n:0,lines=[];let ex=0;
+ EXTRAS.forEach(e=>{if($('x-'+e.id)&&$('x-'+e.id).checked){const c=e.price*(e.per==='guest'?g:1);ex+=c;lines.push([e.name+(e.per==='guest'?` × ${g}`:''),c])}});
+ const sub=base+ex,svc=sub*.1,tg=(sub+svc)*.17;return{v,n,g,base,lines,svc,tg,total:sub+svc+tg}}
+function renderVillas(){let list=VILLAS.filter(v=>filt==='all'||v.tags.includes(filt));list.sort((a,b)=>$('sort').value==='asc'?a.price-b.price:b.price-a.price);const g=+$('g').value,n=nights();
+ if(sel&&VILLAS.find(v=>v.id===sel).cap<g)sel='';
+ $('vl').innerHTML=list.length?list.map(v=>{const off=v.cap<g;return `<label class="vc${off?' off':''}"><input type="radio" name="villa" value="${v.id}" ${sel===v.id?'checked':''} ${off?'disabled':''}><div class="ph"><img referrerpolicy="no-referrer" src="${IMG(v.img)}800" alt="${esc(v.name)}" loading="lazy" decoding="async"></div><div class="vb"><div class="vt"><h3>${v.name}</h3><p class="price">${fmt(v.price)}<small> / night</small></p></div><p class="sub">${v.sub}</p><p class="meta" style="margin:8px 0 0">${v.info}</p>${n?`<p class="meta" style="margin:4px 0 0"><b>${fmt(v.price*n)}</b> for ${n} night${n>1?'s':''}, before taxes</p>`:''}<span class="pick">${off?`Sleeps up to ${v.cap}`:(sel===v.id?'Selected':'Select this villa')}</span></div></label>`}).join(''):'<p>No villas match this filter. Choose “All” to see every villa.</p>';
+ $('vl').querySelectorAll('input').forEach(i=>i.onchange=()=>{sel=i.value;$('v-e').textContent='';renderVillas();update()})}
+function update(){const c=calc(),L=[];
+ $('d-e').textContent='';
+ const rows=c.v?`<div><dt>${c.v.name}</dt><dd>${c.n?fmt(c.base):'Choose dates'}</dd></div>`:'<div><dt>Villa</dt><dd>Not chosen yet</dd></div>';
+ const dates=c.n?`${$('in').value} to ${$('out').value} · ${c.n} night${c.n>1?'s':''} · ${c.g} guest${c.g>1?'s':''}`:'Choose your dates';
+ const h=`<h2>Your stay</h2><p class="meta" style="margin:8px 0 0">${dates}</p><dl>${rows}${c.lines.map(l=>`<div><dt>${esc(l[0])}</dt><dd>${fmt(l[1])}</dd></div>`).join('')}${c.n&&c.v?`<div><dt>Service charge (10%)</dt><dd>${fmt(c.svc)}</dd></div><div><dt>TGST (17%)</dt><dd>${fmt(c.tg)}</dd></div>`:''}<div class="tot"><dt>Estimated total</dt><dd>${c.n&&c.v?fmt(c.total):'—'}</dd></div></dl><p class="fine">An estimate. No payment is taken now. Final rate and availability are confirmed in writing.</p>`;
+ $('sum').innerHTML=h;$('bt').textContent=c.n&&c.v?fmt(c.total):'Select villa'}
+$('ex').innerHTML=EXTRAS.map(e=>`<label class="ex" for="x-${e.id}"><input type="checkbox" id="x-${e.id}"><span><b>${e.name}</b><small>${e.d}</small></span><span class="ep">${fmt(e.price)}<small style="font:400 .75rem var(--sans)">${e.per==='guest'?' per guest':''}</small></span></label>`).join('');
+document.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{filt=b.dataset.f;document.querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed',x===b));renderVillas()});
+$('sort').onchange=renderVillas;
+$('g').onchange=()=>{renderVillas();update()};
+$('in').onchange=()=>{const a=$('in').value;if(a){const d=new Date(a);d.setDate(d.getDate()+1);$('out').min=d.toISOString().slice(0,10);if($('out').value&&$('out').value<=a)$('out').value=''}renderVillas();update()};
+$('out').onchange=()=>{renderVillas();update()};
+document.querySelectorAll('#ex input').forEach(i=>i.onchange=update);
+const mail=(d)=>'mailto:reservations@lumare.example?subject='+encodeURIComponent('Booking request '+d.reference)+'&body='+encodeURIComponent(`Reference: ${d.reference}\nVilla: ${d.villaName}\nDates: ${d.check_in} to ${d.check_out} (${d.guests} guests)\nExtras: ${d.extrasText||'None'}\nEstimated total: ${fmt(d.estimated_total)}\nName: ${d.guest_name}\nEmail: ${d.guest_email}\nPhone: ${d.guest_phone||''}\nArrival: ${d.arrival_info||''}\nRequests: ${d.requests||''}`);
+function msg(t,bad){const m=$('msg');m.className='msg'+(bad?' bad':'');m.innerHTML=t}
+function check(){let bad=null;const set=(id,t)=>{$(id).textContent=t;if(t&&!bad)bad=id};const em=$('e').value.trim();
+ $('n-e').textContent=$('e-e').textContent=$('v-e').textContent=$('d-e').textContent='';
+ const a=$('in').value,b=$('out').value;
+ if(!a||!b)set('d-e','Choose your check-in and check-out dates.');else if(nights()<1)set('d-e','Check-out must be after check-in.');
+ if(!sel)set('v-e','Please choose a villa.');
+ if($('n').value.trim().length<2)set('n-e','Please enter your full name.');
+ if(!/^\S+@\S+\.\S+$/.test(em))set('e-e','Please enter a valid email address, like name@example.com.');
+ if(bad){const t=$(bad);t.scrollIntoView({block:'center'});msg('Please check the highlighted fields above and try again.',true)}return !bad}
+$('bf').onsubmit=async ev=>{ev.preventDefault();if(busy||done)return;if($('hp').value)return;if(!check())return;
+ const c=calc(),cfg=window.LUMARE_CONFIG||{},ex=c.lines.map(l=>l[0]);
+ const d={reference:REF,villa:c.v.id,check_in:$('in').value,check_out:$('out').value,guests:c.g,extras:ex,offer:P.get('offer')||null,estimated_total:Math.round(c.total*100)/100,guest_name:$('n').value.trim(),guest_email:$('e').value.trim(),guest_phone:$('p').value.trim()||null,arrival_info:$('a').value.trim()||null,requests:$('m').value.trim()||null};
+ const md={...d,villaName:c.v.name,extrasText:ex.join(', ')};
+ if(!cfg.SUPABASE_URL||!cfg.SUPABASE_ANON_KEY){msg(`<b>Online booking is not connected yet.</b> Nothing has been sent. <a href="${esc(mail(md))}">Send this request by email instead</a>, and our team will reply within 24 hours.`,true);return}
+ busy=true;[$('sub'),$('sub2')].forEach(b=>{b.disabled=true;b.textContent='Sending…'});msg('Sending your request…');
+ try{const r=await fetch(cfg.SUPABASE_URL.replace(/\/$/,'')+'/rest/v1/booking_requests',{method:'POST',headers:{'Content-Type':'application/json',apikey:cfg.SUPABASE_ANON_KEY,Authorization:'Bearer '+cfg.SUPABASE_ANON_KEY,Prefer:'return=minimal'},body:JSON.stringify(d)});
+  if(!r.ok)throw new Error('status '+r.status);
+  done=true;$('bkwrap').hidden=true;$('bar').hidden=true;const f=$('done');f.hidden=false;
+  f.innerHTML=`<div class="done"><p class="eyebrow">Request received</p><h2>Thank you, ${esc(d.guest_name.split(' ')[0])}.</h2><p class="ref">${d.reference}</p><p class="lead" style="margin:0 auto">We have your request for the ${esc(c.v.name)} from ${d.check_in} to ${d.check_out}. <b>This is not a confirmed booking yet.</b> Our team will check availability and email ${esc(d.guest_email)} within 24 hours with confirmation and a secure payment link.</p><p style="margin-top:32px"><a class="btn" href="index.html">Back to home</a></p></div>`;f.scrollIntoView()
+ }catch(e){busy=false;[$('sub'),$('sub2')].forEach(b=>{b.disabled=false;b.textContent='Request booking'});msg(`<b>We could not send your request.</b> Nothing was booked. Please try again, or <a href="${esc(mail(md))}">send it by email</a>.`,true)}};
+renderVillas();update();
+</script></body></html>
