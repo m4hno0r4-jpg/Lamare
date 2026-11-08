@@ -97,4 +97,12 @@ $('bf').onsubmit=async ev=>{ev.preventDefault();if(busy||done)return;if($('hp').
   f.innerHTML=`<div class="done"><p class="eyebrow">Request received</p><h2>Thank you, ${esc(d.guest_name.split(' ')[0])}.</h2><p class="ref">${d.reference}</p><p class="lead" style="margin:0 auto">We have your request for the ${esc(c.v.name)} from ${d.check_in} to ${d.check_out}. <b>This is not a confirmed booking yet.</b> Our team will check availability and email ${esc(d.guest_email)} within 24 hours with confirmation and a secure payment link.</p><p style="margin-top:32px"><a class="btn" href="index.html">Back to home</a></p></div>`;f.scrollIntoView()
  }catch(e){busy=false;[$('sub'),$('sub2')].forEach(b=>{b.disabled=false;b.textContent='Request booking'});msg(`<b>We could not send your request.</b> Nothing was booked. Please try again, or <a href="${esc(mail(md))}">send it by email</a>.`,true)}};
 renderVillas();update();
-</script></body></html>
+</script><script>
+(function(){var m=document.querySelector('.mnav');if(!m)return;
+function close(){m.removeAttribute('open')}
+m.addEventListener('click',function(e){if(e.target.closest('a'))close()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+document.addEventListener('click',function(e){if(!m.contains(e.target))close()});
+})();
+</script>
+</body></html>

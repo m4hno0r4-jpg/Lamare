@@ -10,7 +10,6 @@
 <nav aria-label="Primary"><ul><li><a href="#villas">Villas</a></li><li><a href="#spa">Spa</a></li><li><a href="#dining">Dining</a></li><li><a href="#experiences">Experiences</a></li><li><a href="#offers">Offers</a></li></ul></nav>
 <a class="btn" href="booking.html">Reserve</a>
 <details class="mnav"><summary>Menu</summary><ul><li><a href="#villas">Villas</a></li><li><a href="#spa">Spa</a></li><li><a href="#dining">Dining</a></li><li><a href="#experiences">Experiences</a></li><li><a href="#offers">Offers</a></li><li><a href="#plan">Good to know</a></li><li><a href="booking.html">Reserve your stay</a></li></ul></details></div></header>
-<a class="stick" href="booking.html">Reserve your stay</a>
 <main id="main">
 <section class="hero" id="top"><img referrerpolicy="no-referrer" class="" src="https://images.pexels.com/photos/35884499/pexels-photo-35884499.jpeg?auto=compress&cs=tinysrgb&w=1200" srcset="https://images.pexels.com/photos/35884499/pexels-photo-35884499.jpeg?auto=compress&cs=tinysrgb&w=600 600w, https://images.pexels.com/photos/35884499/pexels-photo-35884499.jpeg?auto=compress&cs=tinysrgb&w=1200 1200w, https://images.pexels.com/photos/35884499/pexels-photo-35884499.jpeg?auto=compress&cs=tinysrgb&w=1800 1800w" sizes="100vw" alt="A candlelit spa treatment room at Lumaré" loading="eager" fetchpriority="high" decoding="async">
 <div class="w"><p class="eyebrow" style="color:var(--gold)">Private island resort &amp; spa · Baa Atoll</p><h1>Stillness, found in the Indian Ocean.</h1><p class="sub">Forty-two villas, a lagoon-side spa and a long table set on the sand. Come for a week and leave unhurried.</p>
@@ -60,4 +59,12 @@ if(!n||!/^\S+@\S+\.\S+$/.test(m))return;
 const body=`Name: ${n}\nEmail: ${m}\nArrival: ${$('d1').value||'Flexible'}\nVilla: ${$('v2').value}\n\n${$('m').value}`;
 $('enq-s').textContent='Your email app should open with your enquiry ready to send. If it does not, write to reservations@lumare.example.';
 location.href='mailto:reservations@lumare.example?subject='+encodeURIComponent('Stay enquiry from '+n)+'&body='+encodeURIComponent(body)};
-</script></body></html>
+</script><script>
+(function(){var m=document.querySelector('.mnav');if(!m)return;
+function close(){m.removeAttribute('open')}
+m.addEventListener('click',function(e){if(e.target.closest('a'))close()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+document.addEventListener('click',function(e){if(!m.contains(e.target))close()});
+})();
+</script>
+</body></html>
